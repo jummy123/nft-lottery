@@ -63,7 +63,7 @@ contract Lottery is ERC721 {
             _isApprovedOrOwner(_msgSender(), ticketId),
             "ERC721Burnable: caller is not owner nor approved");
         require(_exists(ticketId), "token already burned or not minted");
-        address owner = ownerOf(ticketId);
+
         _burn(ticketId);
 
         uint idx = ticketIndex[ticketId];
